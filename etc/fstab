@@ -1,0 +1,17 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sdb6 LABEL=Arch
+UUID=d343a78d-d9bf-4bc9-b5d5-8f5b0659be86	/         	ext4      	rw,lazytime,commit=120	0 1
+
+# /dev/sdb2
+UUID=16B1-57A7      	/efi      	vfat      	defaults	0 2
+
+# /dev/sda4 LABEL=swap
+UUID=598c62d3-0613-46c3-9985-556047039cdf	none      	swap      	defaults  	0 0
+
+# /dev/sda3 Data
+UUID=70c20d46-e1e3-4d12-9788-09e73cf5e72e	/media/igor/data	ext4	defaults	0 2
+
+tmpfs	/tmp	tmpfs	defaults,nosuid,nodev	0 0

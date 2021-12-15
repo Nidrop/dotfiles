@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#this script makes headphones active if it is available after startup
+
+str=$(pactl list sinks | grep "analog-output-headphones.*not available")
+if [ -z "$str"]
+then
+	pactl set-sink-port @DEFAULT_SINK@ analog-output-headphones
+fi
+exec chpst -b pulseaudio-change-to-headphones pause

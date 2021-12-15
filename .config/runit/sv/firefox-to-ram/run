@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+#/usr/bin/notify-send "moving firefox profile to RAM, wait for next notification"
+~/.local/bin/firefox-ram-sync
+#notify-send "completed, firefox profile in RAM now"
+exec chpst -b firefox-to-ram pause

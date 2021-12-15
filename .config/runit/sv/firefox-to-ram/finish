@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#notify-send "moving firefox profile to disk, wait for next notification"
+~/.local/bin/firefox-ram-sync
+#notify-send "completed, firefox profile in disk now"

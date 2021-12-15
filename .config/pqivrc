@@ -1,0 +1,12 @@
+[options]
+fullscreen=0
+sort=1
+command-1=|convert - -blur 20 -
+disable-backends=libav,poppler
+browse
+max-depth=1
+#action=goto_file_byname(%c)
+
+[keybindings]
+p { goto_file_relative(-1); }
+n { goto_file_relative(1); }   

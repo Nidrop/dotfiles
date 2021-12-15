@@ -1,0 +1,25 @@
+#!/bin/sh
+
+IFS=
+set -efu
+
+linkConfig=~/.mozilla/firefox
+staticConfig=$linkConfig-static
+volatileConfig=/dev/shm/firefox-config-$USER
+
+if [ ! -r $volatileConfig ]; then
+	mkdir -m0700 $volatileConfig
+fi
+
+if [ "$(readlink $linkConfig)" != "$volatileConfig" ]; then
+	mv $linkConfig $staticConfig
+	ln -s $volatileConfig $linkConfig
+fi
+
+if [ -e $linkConfig/.unpacked ]; then
+	rsync -av --delete --exclude .unpacked $linkConfig/ $staticConfig/
+else
+	rsync -av $staticConfig/ $linkConfig/
+	touch $linkConfig/.unpacked
+fi
+

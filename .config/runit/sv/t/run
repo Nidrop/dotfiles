@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export DISPLAY=:1
+#sudo -u igor /usr/bin/notify-send "hi"
+#notify-send "hi"
+#env > ~/cdrom/env.txt
+exec chpst -b light pause
