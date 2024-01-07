@@ -1,0 +1,43 @@
+{
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    // "java.jdt.ls.java.home": "/lib/jvm/openjdk17/",
+    // "java.configuration.runtimes": [
+
+    //     {
+    //         "name": "JavaSE-1.8",
+    //         "path": "/lib/jvm/java-1.8-openjdk/",
+    //     },
+    //     {
+    //         "name": "JavaSE-17",
+    //         "path": "/lib/jvm/openjdk17/",
+    //         "default": true
+    //     },
+    // ],
+    "window.titleBarStyle": "custom",
+    "keyboard.dispatch": "keyCode",
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["g", "H"],
+            "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+        } 
+    ], 
+    "nerdtree.hideSidebarWhenOpenFile": false,
+    "nerdtree.alwaysShowSidebar": true,
+}
