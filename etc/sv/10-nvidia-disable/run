@@ -1,0 +1,4 @@
+#!/bin/sh
+echo -n 1 > /sys/bus/pci/devices/0000\:01\:00.1/remove
+echo -n 1 > /sys/bus/pci/devices/0000\:01\:00.0/remove
+exec chpst -b 10-nvidia-disable pause
