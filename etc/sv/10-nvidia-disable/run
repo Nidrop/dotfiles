@@ -1,4 +1,7 @@
 #!/bin/sh
+exec 2>&1
+sv check udevd || exit 1
+
 echo -n 1 > /sys/bus/pci/devices/0000\:01\:00.1/remove
 echo -n 1 > /sys/bus/pci/devices/0000\:01\:00.0/remove
 exec chpst -b 10-nvidia-disable pause
